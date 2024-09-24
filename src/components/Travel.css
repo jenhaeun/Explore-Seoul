@@ -1,0 +1,170 @@
+/* Title */
+.appTitle {
+  font-family: 'Merriweather';
+  font-size: 18px;
+  text-align: center;
+  height: 38px;
+  border-bottom: 1px solid #ebebeb;
+  box-sizing: border-box;
+  margin-top: 14px;
+}
+
+/* Section Title */
+h3 {
+  font-size: 18px;
+  margin: 15px 0 20px 20px !important;
+  clear: both; /* Ensure it clears any positioned elements */
+  position: relative; /* Make sure it's within the normal flow */
+  z-index: 1; /* Ensure it stays above other content */
+}
+
+/* Must-Do's */
+.mustDos {
+  width: 100%;
+  margin-bottom: 30px;
+  /* overflow: hidden; */ /* Ensure no floating elements disrupt the flow */
+}
+
+/* Main Image Carousel */
+.mainImage {
+  width: 100%;
+  height: 240px;
+  margin-bottom: 30px;
+  position: relative; /* For positioning pager */
+  display: block; /* Ensure the container takes up space */
+}
+
+.carouselSlide {
+  position: relative;
+}
+
+.carouselImage {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.carouselText {
+  position: absolute;
+  bottom: 25px;
+  left: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.carouselTitle {
+  font-size: 22px;
+  margin: 0;
+}
+
+.carouselDescription {
+  font-size: 16px;
+  margin: 5px 0 0 0;
+}
+
+/* Pager */
+.pager {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 12px; 
+  z-index: 10; 
+  background-color: transparent; 
+}
+
+/* Categories */
+.categoryContainer {
+  margin-bottom: 30px;
+}
+.categories {
+  background-color: #EBF7FF;
+  flex: 1;
+  height: 90px;
+  border-radius: 10px;
+  position: relative;
+  text-align: center;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  overflow: hidden; 
+  color: white; 
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.categoryRow {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.categoryImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 0; 
+}
+.categoryText {
+  z-index: 1; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Ensure the gap does not exceed 30px */
+@media (min-width: 768px) {
+  .categoryRow {
+    gap: 30px;
+  }
+}
+
+/* Itineraries */
+.itineraries {
+  background-color: #EBF7FF;
+  margin: 0 20px;
+  height: 120px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  font-weight: bold;
+  font-size: 16px;
+  color: white;
+}
+
+.itinerariesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+
+.itineraryImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.itineraryText {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Ensure the itineraries container and items take up full width minus margin */
+@media (min-width: 768px) {
+  .itineraries {
+    width: calc(100% - 40px); /* Full width minus 20px margin on both sides */
+  }
+}

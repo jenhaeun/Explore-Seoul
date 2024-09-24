@@ -1,0 +1,77 @@
+/* CSS Reset */
+.moreComponent h1, h2, h3, h4, h5, p, div {
+    margin: 0;
+}
+  
+  /* Title */
+ .moreComponent .appTitle {
+    font-family: 'Merriweather';
+    font-size: 18px;
+    text-align: center;
+    height: 38px;
+    border-bottom: 2px solid #ebebeb;
+    box-sizing: border-box;
+    margin-top: 14px;
+  }
+
+.moreComponent .divider {
+    width: calc(100% - 40px);
+    border: 1px solid #ebebeb;
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+
+/* Tourism Inquiries */
+
+.moreComponent .inquiries {
+    background-color: #EBF7FF;
+    width: calc(100% - 40px); 
+    height: 60px;
+    margin: 0 20px 30px;
+    border-radius: 25px;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.moreComponent .inquiries p span {
+    font-weight: bold;
+}
+
+.moreComponent .call {
+    width: 28px;
+    height: 28px;
+}
+
+/* More Menus */
+
+.moreComponent .moreMenu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.moreComponent .moreMenuImage {
+    background-color: #9FD8FF;
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moreComponent .moreMenuIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.moreComponent .moreMenuText {
+    font-size: 18px;
+}

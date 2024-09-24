@@ -1,0 +1,67 @@
+/* Search Bar */
+.searchBar {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+  }
+  
+  .searchInput {
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+  }
+  
+  /* Category Buttons */
+  .categoryButtons {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .categoryScroll {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px;
+    
+  }
+  
+  .categoryButton {
+    flex-shrink: 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  
+  .categoryButton.active {
+    background-color: #9FD8FF;
+    color: #000;
+  }
+  
+  .categoryScroll {
+    overflow-x: auto;
+    margin: 0 20px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .categoryScroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Remove the scrollbars */
+  body, html {
+    overflow-x: hidden;
+  }
+  

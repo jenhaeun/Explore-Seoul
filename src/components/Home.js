@@ -23,7 +23,7 @@ function Home() {
       description: 'Former presidential office and residence',
     },
     {
-      src: `${process.env.PUBLIC_URL}/assets/images/bukhansan.JPG`,
+      src: `${process.env.PUBLIC_URL}/assets/images/bukhansan.jpg`,
       title: 'Bukhansan National Park',
       description: "One of Korea's most popular hiking destinations",
     },

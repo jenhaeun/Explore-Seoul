@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
+import { getImagePath } from '../utils'; // Ensure this path is correct
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import './Home.css';
@@ -13,22 +14,22 @@ function Home() {
   // Carousel images data
   const images = [
     {
-      src: 'assets/images/gyeongbokgung.jpg',
+      src: getImagePath('assets/images/gyeongbokgung.jpg'),
       title: 'Gyeongbok Palace',
       description: 'Primary royal palace of Joseon dynasty',
     },
     {
-      src: 'assets/images/bluehouse.jpg',
+      src: getImagePath('assets/images/bluehouse.jpg'),
       title: 'Cheongwadae (Blue House)',
       description: 'Former presidential office and residence',
     },
     {
-      src: 'assets/images/bukhansan.JPG',
+      src: getImagePath('assets/images/bukhansan.JPG'),
       title: 'Bukhansan National Park',
       description: "One of Korea's most popular hiking destinations",
     },
     {
-      src: 'assets/images/dmz.jpg',
+      src: getImagePath('assets/images/dmz.jpg'),
       title: 'Demilitarized Zone (DMZ)',
       description: 'Weapon-free buffer zone dividing the Korean peninsula',
     },
@@ -74,17 +75,17 @@ function Home() {
 
   // Mapping weather descriptions to custom icons
   const weatherIcons = {
-    'clear sky': '/assets/icons/clear_sky.png',
-    'few clouds': '/assets/icons/partly_cloudy.png',
-    'scattered clouds': '/assets/icons/partly_cloudy.png',
-    'broken clouds': '/assets/icons/cloudy.png',
-    'overcast clouds': '/assets/icons/cloudy.png',
-    'shower rain': '/assets/icons/rainy.png',
-    'light rain': '/assets/icons/rainy.png',
-    'rain': '/assets/icons/rainy.png',
-    'thunderstorm': '/assets/icons/thunderstorm.png',
-    'snow': '/assets/icons/snow.png',
-    'mist': '/assets/icons/mist.png',
+    'clear sky': getImagePath('assets/icons/clear_sky.png'),
+    'few clouds': getImagePath('assets/icons/partly_cloudy.png'),
+    'scattered clouds': getImagePath('assets/icons/partly_cloudy.png'),
+    'broken clouds': getImagePath('assets/icons/cloudy.png'),
+    'overcast clouds': getImagePath('assets/icons/cloudy.png'),
+    'shower rain': getImagePath('assets/icons/rainy.png'),
+    'light rain': getImagePath('assets/icons/rainy.png'),
+    'rain': getImagePath('assets/icons/rainy.png'),
+    'thunderstorm': getImagePath('assets/icons/thunderstorm.png'),
+    'snow': getImagePath('assets/icons/snow.png'),
+    'mist': getImagePath('assets/icons/mist.png'),
   };
 
   // Helper functions for date formatting
@@ -105,7 +106,7 @@ function Home() {
 
       {/* Image Carousel */}
       <div className="mainImage">
-      <Swiper
+        <Swiper
           modules={[Autoplay]} // Ensure Autoplay module is included
           spaceBetween={0}
           slidesPerView={1}
@@ -140,37 +141,37 @@ function Home() {
         <div className="menuContainer">
           <div className="menu">
             <div className="menuImage">
-              <img src="/assets/icons/itineraries.png" alt="Itineraries" className="menuIcon" />
+              <img src={getImagePath('assets/icons/itineraries.png')} alt="Itineraries" className="menuIcon" />
             </div>
             <p>Suggested Itineraries</p>
           </div>
           <div className="menu">
             <div className="menuImage">
-              <img src="/assets/icons/food.png" alt="Food" className="menuIcon" />
+              <img src={getImagePath('assets/icons/food.png')} alt="Food" className="menuIcon" />
             </div>
             <p>Food</p>
           </div>
           <div className="menu">
             <div className="menuImage">
-              <img src="/assets/icons/shopping.png" alt="Shopping" className="menuIcon" />
+              <img src={getImagePath('assets/icons/shopping.png')} alt="Shopping" className="menuIcon" />
             </div>
             <p>Shopping</p>
           </div>
           <div className="menu">
             <div className="menuImage">
-              <img src="/assets/icons/transportation.png" alt="Transportation" className="menuIcon" />
+              <img src={getImagePath('assets/icons/transportation.png')} alt="Transportation" className="menuIcon" />
             </div>
             <p>Transport-<br />ation</p>
           </div>
           <div className="menu">
             <div className="menuImage">
-              <img src="/assets/icons/useful_phrases.png" alt="Useful Phrases" className="menuIcon" />
+              <img src={getImagePath('assets/icons/useful_phrases.png')} alt="Useful Phrases" className="menuIcon" />
             </div>
             <p>Useful Phrases</p>
           </div>
           <div className="menu">
             <div className="menuImage">
-              <img src="/assets/icons/ebook.png" alt="Maps & Guidebooks" className="menuIcon" />
+              <img src={getImagePath('assets/icons/ebook.png')} alt="Maps & Guidebooks" className="menuIcon" />
             </div>
             <p>Maps & Guidebooks</p>
           </div>
@@ -192,7 +193,7 @@ function Home() {
                 </div>
 
                 <img
-                  src={weatherIcons[day.weather.description] || '/assets/icons/default.png'}
+                  src={weatherIcons[day.weather.description] || getImagePath('assets/icons/default.png')}
                   alt={day.weather.description}
                   className="weatherIcon"
                 />
@@ -216,24 +217,17 @@ function Home() {
       </div>
       <div className="newsContainer">
         <div className="newsContent">
-          <img src="/assets/images/reading.webp" alt="Reading at Hangang Park" />
+          <img src={getImagePath('assets/images/reading.webp')} alt="Reading at Hangang Park" />
           <div className="newsText">
             <p className="newsTitle">2024 Reading at Hangang Park</p>
             <p className="newsDate">Sep 16, 2024</p>
           </div>
         </div>
         <div className="newsContent">
-          <img src="/assets/images/k-link_festival.png" alt="K-Link Festival" />
+          <img src={getImagePath('assets/images/k-link_festival.png')} alt="K-Link Festival" />
           <div className="newsText">
-            <p className="newsTitle">K-Link Festival, a K-pop Event Celebrating...</p>
-            <p className="newsDate">Sep 13, 2024</p>
-          </div>
-        </div>
-        <div className='newsContent'>
-          <img src='/assets/images/changdeok_moonlight_tour.jpg' alt='Changdeok Palace Moonlight Tour' />
-          <div className='newsText'>
-            <p className='newsTitle'>2024 Changdeok Palace Moonlight Tour</p>
-            <p className='newsDate'>Sep 5, 2024</p>
+            <p className="newsTitle">K-Link Festival</p>
+            <p className="newsDate">Sep 10, 2024</p>
           </div>
         </div>
       </div>

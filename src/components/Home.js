@@ -208,35 +208,36 @@ function Home() {
       </div>
 
       {/* News & Events Section */}
-      <div className="newsHeader">
+      <div className='newsHeader'>
         <h3>News & Events</h3>
-        <a href="#none" className="viewMore">
-          View more
-        </a>
+        <a href='#none' className='viewMore'>View more</a>
       </div>
-      <div className="newsContainer">
-        <div className="newsContent">
+      <div className='newsContainer'>
+        <div className='newsContent'>
+          <img src={`${process.env.PUBLIC_URL}/assets/images/k-link_festival.png`} alt="K-Link Festival" />
+          <div className='newsText'>
+            <p className='newsTitle'>K-Link Festival, a K-pop Event Celebrating ···</p>
+            <p className='newsDate'>Sep 13, 2024</p>
+          </div>
+        </div>
+
+        <div className='newsContent'>
           <img src={`${process.env.PUBLIC_URL}/assets/images/reading.webp`} alt="Reading at Hangang Park" />
-          <div className="newsText">
-            <p className="newsTitle">2024 Reading at Hangang Park</p>
-            <p className="newsDate">Sep 16, 2024</p>
+          <div className='newsText'>
+            <p className='newsTitle'>2024 Reading at Hangang Park</p>
+            <p className='newsDate'>Sep 10, 2024</p>
           </div>
         </div>
-        <div className="newsContent">
-          <img src={`${process.env.PUBLIC_URL}/assets/images/food.webp`} alt="Taste of Seoul" />
-          <div className="newsText">
-            <p className="newsTitle">Taste of Seoul Food Festival</p>
-            <p className="newsDate">Sep 23, 2024</p>
-          </div>
-        </div>
-        <div className="newsContent">
-          <img src={`${process.env.PUBLIC_URL}/assets/images/culture.webp`} alt="Culture Night" />
-          <div className="newsText">
-            <p className="newsTitle">Seoul Culture Night</p>
-            <p className="newsDate">Sep 30, 2024</p>
+
+        <div className='newsContent'>
+          <img src={`${process.env.PUBLIC_URL}/assets/images/changdeok_moonlight_tour.jpg`} alt='Changdeok Palace Moonlight Tour' />
+          <div className='newsText'>
+            <p className='newsTitle'>2024 Changdeok Palace Moonlight Tour</p>
+            <p className='newsDate'>Sep 5, 2024</p>
           </div>
         </div>
       </div>
+
     </div>
   );
 }

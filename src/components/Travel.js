@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules'; // Import Autoplay module
 import 'swiper/css';
 import 'swiper/css/autoplay';
-import { getImagePath } from '../utils'; // Import your getImagePath function
 import './Travel.css';
 
 function Travel() {
@@ -51,7 +50,7 @@ function Travel() {
             {images.map((image, index) => (
               <SwiperSlide key={index}>
                 <div className="carouselSlide">
-                  <img src={getImagePath(image.src)} alt={`Slide ${index + 1}`} className="carouselImage" />
+                  <img src={`/${image.src}`} alt={`Slide ${index + 1}`} className="carouselImage" />
                   <div className="carouselText">
                     <h2 className="carouselTitle">{image.title}</h2>
                     <p className="carouselDescription">{image.description}</p>
@@ -72,31 +71,31 @@ function Travel() {
       <div className='categoryContainer'>
         <div className='categoryRow'>
           <div className='categories'>
-            <img className='categoryImage' src={getImagePath('assets/images/arts_and_culture.jpg')} alt="Arts & Culture" />
+            <img className='categoryImage' src="/assets/images/arts_and_culture.jpg" alt="Arts & Culture" />
             <p className='categoryText'>Arts & Culture</p>
           </div>
           <div className='categories'>
-            <img className='categoryImage' src={getImagePath('assets/images/nature.jpg')} alt="Nature" />
+            <img className='categoryImage' src="/assets/images/nature.jpg" alt="Nature" />
             <p className='categoryText'>Nature</p>
           </div>
         </div>
         <div className='categoryRow'>
           <div className='categories'>
-            <img className='categoryImage' src={getImagePath('assets/images/activities.jpg')} alt="Activities" />
+            <img className='categoryImage' src="/assets/images/activities.jpg" alt="Activities" />
             <p className='categoryText'>Activities</p>
           </div>
           <div className='categories'>
-            <img className='categoryImage' src={getImagePath('assets/images/health_and_wellness.jpg')} alt="Health & Wellness" />
+            <img className='categoryImage' src="/assets/images/health_and_wellness.jpg" alt="Health & Wellness" />
             <p className='categoryText'>Health & Wellness</p>
           </div>
         </div>
         <div className='categoryRow'>
           <div className='categories'>
-            <img className='categoryImage' src={getImagePath('assets/images/shopping.jpg')} alt="Shopping" />
+            <img className='categoryImage' src="/assets/images/shopping.jpg" alt="Shopping" />
             <p className='categoryText'>Shopping</p>
           </div>
           <div className='categories'>
-            <img className='categoryImage' src={getImagePath('assets/images/kpop.jpg')} alt="K-Pop" />
+            <img className='categoryImage' src="/assets/images/kpop.jpg" alt="K-Pop" />
             <p className='categoryText'>K-Pop</p>
           </div>
         </div>
@@ -105,23 +104,23 @@ function Travel() {
       <h3>Suggested Itineraries</h3>
       <div className='itinerariesContainer'>
         <div className='itineraries'>
-          <img className='itineraryImage' src={getImagePath('assets/images/ultimate_guide.jpg')} alt="Ultimate Guide" />
+          <img className='itineraryImage' src="/assets/images/ultimate_guide.jpg" alt="Ultimate Guide" />
           <p className='itineraryText'>Ultimate Guide for First-Time Visitors</p>
         </div>
         <div className='itineraries'>
-          <img className='itineraryImage' src={getImagePath('assets/images/history_walk.jpg')} alt="History Walk" />
+          <img className='itineraryImage' src="/assets/images/history_walk.jpg" alt="History Walk" />
           <p className='itineraryText'>Walk into History of Korea</p>
         </div>
         <div className='itineraries'>
-          <img className='itineraryImage' src={getImagePath('assets/images/culture_food.jpg')} alt="Culture & Food" />
+          <img className='itineraryImage' src="/assets/images/culture_food.jpg" alt="Culture & Food" />
           <p className='itineraryText'>5 Days of Culture & Food</p>
         </div>
         <div className='itineraries'>
-          <img className='itineraryImage' src={getImagePath('assets/images/k_beauty.jpg')} alt="K-Beauty Experience" />
+          <img className='itineraryImage' src="/assets/images/k_beauty.jpg" alt="K-Beauty Experience" />
           <p className='itineraryText'>K-Beauty Experience</p>
         </div>
         <div className='itineraries'>
-          <img className='itineraryImage' src={getImagePath('assets/images/nature_lovers.jpg')} alt="For Nature Lovers" />
+          <img className='itineraryImage' src="/assets/images/nature_lovers.jpg" alt="For Nature Lovers" />
           <p className='itineraryText'>For Nature Lovers</p>
         </div>
       </div>

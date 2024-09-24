@@ -21,7 +21,7 @@ function Travel() {
       description: 'Grill kimchi and have it together with the meat',
     },
     {
-      src: 'assets/images/hanbok.JPG',
+      src: 'assets/images/hanbok.jpg',
       title: 'Feel Like Royalty in Hanbok',
       description: "Wear hanbok at royal palaces and get free entry",
     },

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
-import { getImagePath } from '../utils'; // Ensure this path is correct
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import './Home.css';
@@ -14,22 +13,22 @@ function Home() {
   // Carousel images data
   const images = [
     {
-      src: getImagePath('assets/images/gyeongbokgung.jpg'),
+      src: `${process.env.PUBLIC_URL}/assets/images/gyeongbokgung.jpg`,
       title: 'Gyeongbok Palace',
       description: 'Primary royal palace of Joseon dynasty',
     },
     {
-      src: getImagePath('assets/images/bluehouse.jpg'),
+      src: `${process.env.PUBLIC_URL}/assets/images/bluehouse.jpg`,
       title: 'Cheongwadae (Blue House)',
       description: 'Former presidential office and residence',
     },
     {
-      src: getImagePath('assets/images/bukhansan.JPG'),
+      src: `${process.env.PUBLIC_URL}/assets/images/bukhansan.JPG`,
       title: 'Bukhansan National Park',
       description: "One of Korea's most popular hiking destinations",
     },
     {
-      src: getImagePath('assets/images/dmz.jpg'),
+      src: `${process.env.PUBLIC_URL}/assets/images/dmz.jpg`,
       title: 'Demilitarized Zone (DMZ)',
       description: 'Weapon-free buffer zone dividing the Korean peninsula',
     },
@@ -75,17 +74,17 @@ function Home() {
 
   // Mapping weather descriptions to custom icons
   const weatherIcons = {
-    'clear sky': getImagePath('assets/icons/clear_sky.png'),
-    'few clouds': getImagePath('assets/icons/partly_cloudy.png'),
-    'scattered clouds': getImagePath('assets/icons/partly_cloudy.png'),
-    'broken clouds': getImagePath('assets/icons/cloudy.png'),
-    'overcast clouds': getImagePath('assets/icons/cloudy.png'),
-    'shower rain': getImagePath('assets/icons/rainy.png'),
-    'light rain': getImagePath('assets/icons/rainy.png'),
-    'rain': getImagePath('assets/icons/rainy.png'),
-    'thunderstorm': getImagePath('assets/icons/thunderstorm.png'),
-    'snow': getImagePath('assets/icons/snow.png'),
-    'mist': getImagePath('assets/icons/mist.png'),
+    'clear sky': `${process.env.PUBLIC_URL}/assets/icons/clear_sky.png`,
+    'few clouds': `${process.env.PUBLIC_URL}/assets/icons/partly_cloudy.png`,
+    'scattered clouds': `${process.env.PUBLIC_URL}/assets/icons/partly_cloudy.png`,
+    'broken clouds': `${process.env.PUBLIC_URL}/assets/icons/cloudy.png`,
+    'overcast clouds': `${process.env.PUBLIC_URL}/assets/icons/cloudy.png`,
+    'shower rain': `${process.env.PUBLIC_URL}/assets/icons/rainy.png`,
+    'light rain': `${process.env.PUBLIC_URL}/assets/icons/rainy.png`,
+    'rain': `${process.env.PUBLIC_URL}/assets/icons/rainy.png`,
+    'thunderstorm': `${process.env.PUBLIC_URL}/assets/icons/thunderstorm.png`,
+    'snow': `${process.env.PUBLIC_URL}/assets/icons/snow.png`,
+    'mist': `${process.env.PUBLIC_URL}/assets/icons/mist.png`,
   };
 
   // Helper functions for date formatting
@@ -141,37 +140,37 @@ function Home() {
         <div className="menuContainer">
           <div className="menu">
             <div className="menuImage">
-              <img src={getImagePath('assets/icons/itineraries.png')} alt="Itineraries" className="menuIcon" />
+              <img src={`${process.env.PUBLIC_URL}/assets/icons/itineraries.png`} alt="Itineraries" className="menuIcon" />
             </div>
             <p>Suggested Itineraries</p>
           </div>
           <div className="menu">
             <div className="menuImage">
-              <img src={getImagePath('assets/icons/food.png')} alt="Food" className="menuIcon" />
+              <img src={`${process.env.PUBLIC_URL}/assets/icons/food.png`} alt="Food" className="menuIcon" />
             </div>
             <p>Food</p>
           </div>
           <div className="menu">
             <div className="menuImage">
-              <img src={getImagePath('assets/icons/shopping.png')} alt="Shopping" className="menuIcon" />
+              <img src={`${process.env.PUBLIC_URL}/assets/icons/shopping.png`} alt="Shopping" className="menuIcon" />
             </div>
             <p>Shopping</p>
           </div>
           <div className="menu">
             <div className="menuImage">
-              <img src={getImagePath('assets/icons/transportation.png')} alt="Transportation" className="menuIcon" />
+              <img src={`${process.env.PUBLIC_URL}/assets/icons/transportation.png`} alt="Transportation" className="menuIcon" />
             </div>
             <p>Transport-<br />ation</p>
           </div>
           <div className="menu">
             <div className="menuImage">
-              <img src={getImagePath('assets/icons/useful_phrases.png')} alt="Useful Phrases" className="menuIcon" />
+              <img src={`${process.env.PUBLIC_URL}/assets/icons/useful_phrases.png`} alt="Useful Phrases" className="menuIcon" />
             </div>
             <p>Useful Phrases</p>
           </div>
           <div className="menu">
             <div className="menuImage">
-              <img src={getImagePath('assets/icons/ebook.png')} alt="Maps & Guidebooks" className="menuIcon" />
+              <img src={`${process.env.PUBLIC_URL}/assets/icons/ebook.png`} alt="Maps & Guidebooks" className="menuIcon" />
             </div>
             <p>Maps & Guidebooks</p>
           </div>
@@ -193,7 +192,7 @@ function Home() {
                 </div>
 
                 <img
-                  src={weatherIcons[day.weather.description] || getImagePath('assets/icons/default.png')}
+                  src={weatherIcons[day.weather.description] || `${process.env.PUBLIC_URL}/assets/icons/default.png`}
                   alt={day.weather.description}
                   className="weatherIcon"
                 />
@@ -217,17 +216,24 @@ function Home() {
       </div>
       <div className="newsContainer">
         <div className="newsContent">
-          <img src={getImagePath('assets/images/reading.webp')} alt="Reading at Hangang Park" />
+          <img src={`${process.env.PUBLIC_URL}/assets/images/reading.webp`} alt="Reading at Hangang Park" />
           <div className="newsText">
             <p className="newsTitle">2024 Reading at Hangang Park</p>
             <p className="newsDate">Sep 16, 2024</p>
           </div>
         </div>
         <div className="newsContent">
-          <img src={getImagePath('assets/images/k-link_festival.png')} alt="K-Link Festival" />
+          <img src={`${process.env.PUBLIC_URL}/assets/images/food.webp`} alt="Taste of Seoul" />
           <div className="newsText">
-            <p className="newsTitle">K-Link Festival</p>
-            <p className="newsDate">Sep 10, 2024</p>
+            <p className="newsTitle">Taste of Seoul Food Festival</p>
+            <p className="newsDate">Sep 23, 2024</p>
+          </div>
+        </div>
+        <div className="newsContent">
+          <img src={`${process.env.PUBLIC_URL}/assets/images/culture.webp`} alt="Culture Night" />
+          <div className="newsText">
+            <p className="newsTitle">Seoul Culture Night</p>
+            <p className="newsDate">Sep 30, 2024</p>
           </div>
         </div>
       </div>
